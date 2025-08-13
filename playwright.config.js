@@ -16,7 +16,7 @@ require('dotenv').config()
 export default defineConfig({
 
 
-  //timeout : 45000, // 30000
+  // timeout : 45000, // 30000
   // expect:{
 
   //   timeout : 20000
@@ -37,6 +37,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
 
+    testIdAttribute: "aria-label",
     baseURL : 'https://opensource-demo.orangehrmlive.com',
     screenshot : "on",
     video : "retain-on-failure",
