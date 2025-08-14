@@ -39,12 +39,15 @@ test('Verify Login with InValid Username and valid Password', async ({ page }) =
 });
 
 test('Verify Login with InValid Username and invalid Password', async ({ page }) => {
+
+  const wrongusername = "sdfbhdvjhb "
+  const wrongpassword = "fhbekrhjbgf"
   await page.goto('/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).click();
-  await page.getByRole('textbox', { name: 'Username' }).fill(data.wrongusername);
+  await page.getByRole('textbox', { name: 'Username' }).fill(wrongusername);
   await page.waitForTimeout(4000)
   await page.getByRole('textbox', { name: 'Password' }).click();
-  await page.getByRole('textbox', { name: 'Password' }).fill(data.wrongpassword);
+  await page.getByRole('textbox', { name: 'Password' }).fill(wrongpassword);
   await page.waitForTimeout(4000)
   await page.getByRole('button', { name: 'Login' }).click();
   await expect(page.getByText('Invalid credentials Raju')).toBeVisible();
