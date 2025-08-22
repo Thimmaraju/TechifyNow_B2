@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Conditional Test Suite', () => {
+test.describe('Conditional Test Suite', () => {  
     test('should run a basic test', async ({ page }) => {
 
         await page.goto('https://register.rediff.com/register/register.php?FormName=user_details')
