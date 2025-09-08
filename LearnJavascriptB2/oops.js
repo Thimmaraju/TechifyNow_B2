@@ -42,11 +42,11 @@ emp1.displayempdetails()
 
 // Inheritance 
 
-//  single Inheritance 
-//  multilevel Inheritance
-//  multiple Inheritance
-//  Hirachical Inheritance
-//  Hybrid Inheritance
+//  single Inheritance  - Supported 
+//  multilevel Inheritance - Supported
+//  multiple Inheritance - Not Supported
+//  Hirachical Inheritance - Supported
+//  Hybrid Inheritance - Not Supported
 
 
 class A {
@@ -91,7 +91,27 @@ class B extends A {
 }
 
 
-const obj = new B()
+class C extends B{
+
+
+    m7() {
+
+        console.log("This is a M7 Method")
+    }
+
+    m8() {
+
+        console.log("This is a M8 Method")
+    }
+
+}
+
+const obj = new C()
 
 obj.m1()  // A
 obj.m5()   // B
+obj.m8() //C
+
+//----------------------------------
+
+//Polymorphism 
