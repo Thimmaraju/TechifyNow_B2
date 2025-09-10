@@ -16,7 +16,7 @@ require('dotenv').config({"quiet" : true})
 export default defineConfig({
 
 
-  // timeout : 45000, // 30000
+  timeout : 45000, // 30000
   // expect:{
 
   //   timeout : 20000

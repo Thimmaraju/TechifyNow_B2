@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('Conditional Test Suite', () => {  
-    test('should run a basic test', async ({ page }) => {
+    test('should run a basic test', {tag : ["@smoke", "@raju"]}, async ({ page }) => {
 
         await page.goto('https://register.rediff.com/register/register.php?FormName=user_details')
 
@@ -24,7 +24,7 @@ test.describe('Conditional Test Suite', () => {
     });
 
 
-    test('should run based on browser name', async ({ page, browserName }) => {
+    test('should run based on browser name',{tag: "@smoke" }, async ({ page, browserName }) => {
 
         switch (browserName) {
             case "chromium":

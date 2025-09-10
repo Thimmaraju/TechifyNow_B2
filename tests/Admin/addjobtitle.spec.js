@@ -42,7 +42,7 @@ for (let jobtitle in jobtitles) {
 
 
 
-test('Verify Error Message for Mandatory', async ({ page }) => {
+test('Verify Error Message for Mandatory', {tag: "@smoke" }, async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
   await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
