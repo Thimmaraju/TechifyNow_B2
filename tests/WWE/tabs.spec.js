@@ -52,20 +52,24 @@ test.describe('Automation - Working With Elements', () => {
 
     await page.goto('https://www.flipkart.com/');
 
-    await page.locator('input[name="q"]').fill("Iphone")
+    await page.locator('input[name="q"]').fill("Iphone 17")
 
     await page.locator('input[name="q"]').press('Enter')
+
+    await page.getByRole("")
 
 
     const [NewPage] = await Promise.all([
       page.waitForEvent('popup'),
-      await page.locator("//div[text()='Apple iPhone 13 (Starlight, 128 GB)']").click()
+      await page.locator("//div[text()='Apple iPhone 17 (Mist Blue, 256 GB)']").click()
     ]);
 
     //await expect(newTab).toHaveURL(/apple-iphone-16-teal-256-gb/)
 
+    await NewPage.locator("//button[text()='Add to cart']").dispatchEvent('click');
 
-    const nameofthePhone = await NewPage.locator("._6EBuvT>span").textContent();
+
+     const nameofthePhone = await NewPage.locator("._6EBuvT>span").textContent();
 
     console.log(nameofthePhone)
 

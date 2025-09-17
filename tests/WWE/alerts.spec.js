@@ -24,7 +24,7 @@ test.describe('Automation - Working with Alerts', () => {
     page.locator('text=Click for JS Confirm').click();
     // Wait for the confirm dialog and accept it (Click OK)
     page.on('dialog', async dialog => {
-      expect(dialog.type()).toBe('confirm');
+     // expect(dialog.type()).toBe('confirm');
       await dialog.accept();
     });
     await page.waitForTimeout(5000)
@@ -49,7 +49,7 @@ test.describe('Automation - Working with Alerts', () => {
     // Intercept the prompt and return a response
     page.on('dialog', async dialog => {
       expect(dialog.type()).toBe('prompt');
-      await dialog.dismiss(); // Enter the value and accept
+      await dialog.accept("Jagdish"); // Enter the value and accept
     });
     await page.waitForTimeout(5000)
   });

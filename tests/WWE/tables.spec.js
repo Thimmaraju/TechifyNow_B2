@@ -38,6 +38,8 @@ test.describe('Automation - Working With Table', () => {
 
     //Verify values 
 
+    await expect(page.locator(`//table[@id="table1"]/tbody/tr/td[text()='Smith']/../td[4]`)).toHaveText("$50.00")
+
     await expect(page.locator('//table[@id="table1"]/tbody/tr[1]/td[3]')).toHaveText("jsmith@gmail.com")
 
     await expect(page.locator('#table1 >tbody>tr:nth-child(2) >td:nth-child(3)')).toHaveText("fbach@yahoo.com")
