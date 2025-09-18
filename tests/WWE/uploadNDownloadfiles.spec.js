@@ -38,12 +38,12 @@ test.describe('Automation - Working With Elements', () => {
 
         await page.goto('http://blueimp.github.io/jQuery-File-Upload/')
 
-        await page.setInputFiles('input[type="file"]', [
-            './testData/files/21. Test Design techniques.png',
-            './testData/files/24. Example Defect.png'
-        ])
+        // await page.setInputFiles('input[type="file"]', [
+        //     './testData/files/21. Test Design techniques.png',
+        //     './testData/files/24. Example Defect.png'
+        // ])
 
-        //await page.locator('input[type="file"]').setInputFiles(['testData/uploadfiles/Cat.jpg', 'testData/uploadfiles/learn.jpg', 'testData/uploadfiles/imagepng.png'])
+        await page.locator('input[type="file"]').setInputFiles(['testData/uploads/Cat.jpg', 'testData/uploads/house.jpg', 'testData/uploads/learn.jpg'])
 
         // await expect(page.locator('p.name').nth(0)).toHaveText('Levels of testing.png')
         // await expect(page.locator('p.name').nth(1)).toHaveText('rtmsample.png')

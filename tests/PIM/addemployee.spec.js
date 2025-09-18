@@ -14,6 +14,11 @@ test('Verify User can Create Employee', async ({page}) => {
   await page.getByRole('link', { name: 'Add Employee' }).click();
   await page.getByRole('textbox', { name: 'First Name' }).fill(addemployeedata.firstname);
   await page.getByRole('textbox', { name: 'Last Name' }).fill(addemployeedata.lastname);
+
+  await page.locator('input[type="file"]').setInputFiles('testData/uploads/Cat.jpg')
+
+  await page.waitForTimeout(5000)
+
   await page.getByRole('button', { name: 'Save' }).click();
   await expect(page.getByRole('heading', { name: 'Personal Details' })).toBeVisible();
 });
