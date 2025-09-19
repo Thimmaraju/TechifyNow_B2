@@ -19,3 +19,16 @@ test('scroll to specific element', async ({ page }) => {
     expect(await page.locator('h1 span').textContent()).toEqual('Hamilton')
 
 });
+
+
+test("Scrolling ", async ({page}) =>{
+
+  await page.goto("https://www.imdb.com/chart/top/")
+
+  await page.locator("//h3[text()='177. Fargo']").scrollIntoViewIfNeeded()
+
+  await page.waitForTimeout(4000)
+
+  await page.locator("//h3[text()='177. Fargo']").click()
+
+})

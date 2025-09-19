@@ -23,4 +23,6 @@ test('Element screenshot Example 2 ', async ({ page }) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     await page.waitForTimeout(3000)
     await page.locator('.oxd-form').screenshot({ path: 'tests/screenshots/' + Date.now() + 'element.png' })
+    await page.locator('//input[@name="username"]').screenshot({ path: 'tests/screenshots/' + Date.now() + 'username.png' })
+    
 });

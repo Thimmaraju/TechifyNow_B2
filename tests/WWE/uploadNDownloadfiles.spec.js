@@ -57,7 +57,7 @@ test.describe('Automation - Working With Elements', () => {
 
          const [download] = await Promise.all([
             page.waitForEvent('download'),
-            page.locator('//a[@href="download/kote.jpg"]').click()
+            page.locator('//a[@href="download/download.jpeg"]').click()
         ]);
 
         const suggestedFileName = download.suggestedFilename()
@@ -71,7 +71,7 @@ test.describe('Automation - Working With Elements', () => {
     test('Download Multiple files and assert', async ({ page }) => {
         await page.goto('https://the-internet.herokuapp.com/download')
 
-        const fileNames = ["img.JPG", "Image_2.jpg"]
+        const fileNames = ["DSC00050.JPG", "puppy.png"]
 
 
         for (const fileName of fileNames) {
