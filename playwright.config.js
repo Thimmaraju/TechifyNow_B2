@@ -48,13 +48,22 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] ,
-        //viewport : {width : 412 , height: 914}
-          
+
+     {
+      name: "setup",
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: 'chrome'
       },
+      testMatch: /.*\.setup\.js/,
     },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] ,
+    //     //viewport : {width : 412 , height: 914}
+          
+    //   },
+    // },
 
     // {
     //   name: 'firefox',
@@ -81,13 +90,14 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    //  {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome',
-    //       //viewport : {width : 412 , height: 914}
-    //    },
-        // 
-   // },
+      {
+      name: 'Google Chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome',
+          //viewport : {width : 412 , height: 914}
+           storageState: ".auth/user.json",
+      },
+      dependencies: ["setup"],
+   },
   ],
 
   /* Run your local dev server before starting the tests */
