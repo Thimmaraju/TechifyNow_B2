@@ -14,15 +14,15 @@ test.describe("Verify Stubbing Get Employees API", () => {
             data: [
               {
                 empNumber: 7,
-                lastName: "Harris",
-                firstName: "Sheena",
+                lastName: "Rao",
+                firstName: "Jagdish",
                 middleName: "ABC",
                 employeeId: "1234",
                 terminationId: null,
                 jobTitle: {
-                  id: null,
-                  title: null,
-                  isDeleted: null,
+                  id: "1",
+                  title: "SDET1",
+                  isDeleted: true,
                 },
                 subunit: {
                   id: 13,
@@ -36,7 +36,7 @@ test.describe("Verify Stubbing Get Employees API", () => {
                   {
                     "empNumber": 170,
                     "lastName": "xyz",
-                    "firstName": "Narayan",
+                    "firstName": "RAJU",
                     "middleName": "Abc"
                 }
                 ],
@@ -65,7 +65,7 @@ test.describe("Verify Stubbing Get Employees API", () => {
                 supervisors: [],
               }
             ],
-            meta: { total: 500 },
+            meta: { total: 123 },
             rels: [],
           }),
         });

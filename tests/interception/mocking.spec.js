@@ -10,9 +10,9 @@ test("Example for Mocking", async ({ page }) => {
       const url = new URL(originalRequest.url());
 
       // Modify query parameters as required
-      url.searchParams.set("limit", "3");
-      url.searchParams.set("sortOrder", "ASC");
-      url.searchParams.set("sortField", "employee.firstName");
+      url.searchParams.set("limit", "6");
+      url.searchParams.set("sortOrder", "DESC");
+      //url.searchParams.set("sortField", "employee.firstName");
 
       // Continue the request with modified query parameters
       await route.continue({ url: url.toString() });
