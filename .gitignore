@@ -10,3 +10,6 @@ allure-report
 allure-results
 downloads
 tests/screenshots
+
+# Playwright
+/playwright/.auth/
