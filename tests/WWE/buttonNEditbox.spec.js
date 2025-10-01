@@ -15,7 +15,7 @@ test('Verify clicking on Hidden element ', async ({ page }) => {
 })
 
 
-test.only('Verify clicking on Edit box element ', async ({ page }) => {
+test('Verify clicking on Edit box element ', async ({ page }) => {
 
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
